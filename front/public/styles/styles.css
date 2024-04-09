@@ -1,0 +1,135 @@
+.margin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.btn_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    &:hover{
+        transform: scale(1.1);
+    }
+}
+.bord_user{
+    border: 1px solid #fff;
+    display: block;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin-right: 15px;
+    & i{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+.link_of_user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 15px;
+    &:hover{
+        scale: 1.1;
+    }
+}
+.from-sty{
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    border-radius: 15px;
+    border: 2px solid rgba(175, 175, 175, 0.6);
+    -webkit-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+}
+.autor_publicarion{
+    display: flex;
+}
+.circle{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+.autor{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.img_public{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.contenedor_of_all{
+    display: flex;
+    gap: 50px;
+}
+.content-leteral{
+    position: ;
+    width:100%;
+    max-width: 400px;
+    padding: 50px 15px;
+    -webkit-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    .titulo_economia{
+        font-family:  sans-serif;
+    }
+    .parrafo{
+        text-align: justify;
+        font-family:  sans-serif;
+        line-height: 18px;
+        letter-spacing: 1px;
+    }
+}
+.barra_notifications{
+    display: flex;
+    color: rgb(12, 146, 255);
+    font-size: 1.5rem;
+    justify-content: center;
+    padding: 5px 10px;
+    & i{
+        margin: 0 50px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover{
+            scale: 1.2;
+            animation: sacudir .2s infinite;
+        }
+    }
+}
+
+
+
+
+
+@keyframes sacudir {
+    0%{rotate: 0;}
+    20%{rotate:10deg;}
+    40%{rotate: -10deg;}
+    60%{rotate:10deg}
+    80%{rotate: -10deg;}
+    100%{rotate: 0;}
+    
+}

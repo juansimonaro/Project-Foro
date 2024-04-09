@@ -1,0 +1,46 @@
+.margin{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.from-sty{
+    padding: 15px;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 100px;
+    border-radius: 15px;
+    border: 2px solid rgba(175, 175, 175, 0.6);
+    -webkit-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+    box-shadow: 4px 11px 16px -3px rgba(0,0,0,0.75);
+}
+.autor_publicarion{
+    display: flex;
+}
+
+.circle{
+    display: block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 1px solid #000;
+}
+.autor{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img_public{
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    overflow: hidden;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
