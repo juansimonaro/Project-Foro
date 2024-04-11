@@ -1,6 +1,5 @@
 import { Router } from "express";
 import { jsonResponse } from "../lib/jsonresponse.js";
-import { CompareUser } from "../controllers/users.controllers.js";
 import bcrypt from 'bcrypt';
 import { sql } from "../database/db.js";
 
@@ -31,7 +30,6 @@ routes.post('/', async (req, res) => {
         })
     }
     // autenticar
-    const auth = await CompareUser(req, res)
     const accessToken = "access_token";
     const refreshToken = "refresh_token";
     const user = {usuario}

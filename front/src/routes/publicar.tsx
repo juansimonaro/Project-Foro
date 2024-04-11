@@ -29,13 +29,18 @@ export const Publicar = () =>  {
             formData.append('title', title);
             formData.append('content', content);
             formData.append('imagen', imagen);
-            await axios.post('http://localhost:5000/images', formData);
+            const response = await axios.post('http://localhost:5000/images', formData);
+            
+            if (response.status === 200) {
+                // Limpia los campos aquí
+                setTitulo('');
+                setContenido('');
+                setImagen(null);
+            }
         } catch (error) {
             return console.log(error)
         }
-        setTitulo("");
-        setContenido("")
-        setImagen(null)
+        
     };
 
     return (
@@ -43,13 +48,13 @@ export const Publicar = () =>  {
             <br />
             <form className="from-sty px-2" onSubmit={manejarEnvio}>
                 <label className="col-form-label">Título:
-                    <input className="form-control input" type="text" value={title} onChange={manejarCambioTitulo} />
+                    <input required id='title' className="form-control input" type="text" value={title} onChange={manejarCambioTitulo} />
                 </label>
                 <label className="col-form-label">Contenido:
-                    <textarea  className="form-control input"value={content} onChange={manejarCambioContenido} />
+                    <textarea required id='content' className="form-control input"value={content} onChange={manejarCambioContenido} />
                 </label>
                 <label className="col-form-label">Imagen:
-                    <input className="form-control input" type="file" onChange={manejarCambioImagen} />
+                    <input id='image' className="form-control input" type="file" onChange={manejarCambioImagen} />
                 </label>
                 <br />
                 <button type="submit" className="btn btn-primary w-100">Crear publicación</button>

@@ -11,7 +11,7 @@ export const Publications = () => {
     }, [])
     const showPublications = () => {
         axios
-            .get(`http://localhost:5000/images`)
+            .get('http://localhost:5000/images')
             .then((res) => {
                 console.log(res);
                 setPublication(res.data);
@@ -39,7 +39,7 @@ export const Publications = () => {
                                 <p className="card-text">{Publications.content}</p>
                             </div>
                             <div className='img_public'>
-                                <img src={Publications.image} title='Imagen publicada'/>
+                                <img src={'http://localhost:5000'+Publications.image} title='Imagen publicada'/>
                             </div>
 
                             <div className='barra_notifications'>

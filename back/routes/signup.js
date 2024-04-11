@@ -1,6 +1,6 @@
 import { Router } from "express";
 import { jsonResponse } from "../lib/jsonresponse.js";
-import { CreateUser, compareEmail } from '../controllers/users.controllers.js'
+import { CreateUser} from '../controllers/users.controllers.js'
 
 const routes = Router();
 
