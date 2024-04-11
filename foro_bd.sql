@@ -32,8 +32,6 @@ CREATE TABLE `publications` (
   `id_user` int DEFAULT NULL,
   `fecha_creacion` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id_publications`),
-  KEY `FK_publications_users` (`id_user`),
-  CONSTRAINT `FK_publications_users` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5;
 /*!40101 SET character_set_client = @saved_cs_client */;
 

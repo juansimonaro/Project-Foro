@@ -45,8 +45,6 @@ router.post('/images', upload.single('imagen'), async (req, res) => {
                 console.error(err);
                 return res.status(500).send('Error al crear la publicación');
             }
-            console.log(result);
-            res.send('Publicación creada con éxito');
         });
     } catch (error) {
         console.error(error);

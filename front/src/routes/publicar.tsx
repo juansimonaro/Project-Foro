@@ -5,17 +5,17 @@ import { Navigate, useNavigate } from "react-router-dom";
 import swal from 'sweetalert';
 
 export const Publicar = () =>  {
-    const [title, setTitulo] = useState('');
-    const [content, setContenido] = useState('');
+    const [title, setTitle] = useState('');
+    const [content, setContent] = useState('');
     const [imagen, setImagen] = useState(null);
     const goTo = useNavigate();
 
     const manejarCambioTitulo = e => {
-        setTitulo(e.target.value);
+        setTitle(e.target.value);
     };
 
     const manejarCambioContenido = e => {
-        setContenido(e.target.value);
+        setContent(e.target.value);
     };
 
     const manejarCambioImagen = e => {
@@ -29,14 +29,11 @@ export const Publicar = () =>  {
             formData.append('title', title);
             formData.append('content', content);
             formData.append('imagen', imagen);
-            const response = await axios.post('http://localhost:5000/images', formData);
+            await axios.post('http://localhost:5000/images', formData);
+        
+            goTo('/dash/');
+
             
-            if (response.status === 200) {
-                // Limpia los campos aquí
-                setTitulo('');
-                setContenido('');
-                setImagen(null);
-            }
         } catch (error) {
             return console.log(error)
         }
